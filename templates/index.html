@@ -1,0 +1,109 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNN Model Prediction</title>
+</head>
+<body>
+    <h1>RNN Model Prediction</h1>
+    <form action="/" method="post">
+        <label for="input_data">Enter input data (comma-separated values):</label><br><br>
+        <input type="text" id="input_data" name="input_data" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+    <h2>Prediction Result:</h2>
+    <p>{{ prediction }}</p>
+    {% endif %}
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNN Model Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+        .prediction {
+            margin-top: 20px;
+            background: #e2e3e5;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>RNN Model Prediction</h1>
+    <form action="/" method="post">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+
+        <label for="fibro_vessel">Fibroblast and Vessel Percent:</label>
+        <input type="text" id="fibro_vessel" name="fibro_vessel" required>
+
+        <label for="sex">Sex (male or female):</label>
+        <input type="text" id="sex" name="sex" required>
+
+        <label for="feature1">Feature 1 (Microbiome 1):</label>
+        <input type="text" id="feature1" name="feature1" required>
+
+        <label for="feature2">Feature 2 (Microbiome 2):</label>
+        <input type="text" id="feature2" name="feature2" required>
+
+        <label for="feature3">Feature 3 (Microbiome 3):</label>
+        <input type="text" id="feature3" name="feature3" required>
+
+        <label for="feature4">Feature 4 (Microbiome 4):</label>
+        <input type="text" id="feature4" name="feature4" required>
+
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+    <div class="prediction">
+        <h2>Prediction Result:</h2>
+        <p>{{ prediction }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
